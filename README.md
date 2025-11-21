@@ -1,6 +1,3 @@
-Aqui está um **README.md completo, profissional e pronto para colocar no GitHub**, explicando *como rodar o projeto Flytics com Docker*, como rodar manualmente, como fazer deploy e boas práticas.
-Organizei tudo de forma clara e completa.
-
 ---
 
 # 🛫 **FLYTICS — Guia Completo de Execução e Deploy**
