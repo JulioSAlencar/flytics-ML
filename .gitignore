@@ -122,11 +122,6 @@ ml-api/*.pyo
 ml-api/*.pyd
 
 # Modelo exportado (pesado)
-ml-api/model_export/
-ml-api/model_export2/*.pkl
-ml-api/model_export2/*.json
-ml-api/model_export2/*.joblib
-
 # NÃO ignorar:
 # ml-api/predict_api.py
 # ml-api/Dockerfile
@@ -165,3 +160,10 @@ docker-dev.sh
 # 🔥 GIT FOLDER ITSELF
 # ============================
 .gitignore
+
+# ============================
+# 🔥 ML-API MODELS (exceções)
+# ============================
+!ml-api/model_export2/
+!ml-api/model_export2/*.json
+!ml-api/model_export2/*.pkl
