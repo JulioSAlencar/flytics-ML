@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: flytics-backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/src:/app/src
+    environment:
+      - NODE_ENV=development
+      - ML_API_URL=http://ml-api:5000   # ✅ AGORA SIM DENTRO DO environment
+    depends_on:
+      - ml-api
+    networks:
+      - flytics-network
+
+  frontend:
+    build: ./frontend
+    container_name: flytics-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/src:/app/src
+    environment:
+      - VITE_API_URL=http://backend:3001
+    depends_on:
+      - backend
+    networks:
+      - flytics-network
+
+  ml-api:
+    build: ./ml-api
+    container_name: flytics-ml-api
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - flytics-network
+
+networks:
+  flytics-network:
+    driver: bridge

@@ -1,0 +1,167 @@
+# Dependencies
+node_modules/
+*/node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build
+dist/
+build/
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# ML Models (opcional para git LFS)
+*.pkl
+*.joblib
+*.h5
+
+
+# ============================
+# 🔥 GLOBAL
+# ============================
+node_modules/
+dist/
+build/
+.env
+.env.*
+.env.local
+*.log
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# ============================
+# 🔥 DOCKER
+# ============================
+**/.dockerignore
+docker-data/
+docker-compose.override.yml
+
+# ============================
+# 🔥 BACKEND (Node + TS)
+# ============================
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/*.log
+backend/.env
+backend/.env.*
+backend/tsconfig.tsbuildinfo
+
+# NÃO ignorar:
+# backend/src/
+# backend/Dockerfile
+# backend/package.json
+# backend/package-lock.json
+# backend/tsconfig.json
+
+# ============================
+# 🔥 FRONTEND (Vite + React)
+# ============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.vite/
+frontend/.eslintcache
+
+# NÃO ignorar:
+# frontend/src/
+# frontend/package.json
+# frontend/package-lock.json
+# frontend/tailwind.config.js
+# frontend/vite.config.ts
+
+# ============================
+# 🔥 ML (Jupyter, Python, datasets)
+# ============================
+ml/.venv/
+ml/__pycache__/
+ml/.ipynb_checkpoints/
+ml/temp_*.csv
+ml/*.pyc
+ml/*.pyo
+ml/*.pyd
+ml/export/
+ml/model_export/
+ml/temp/
+ml/*.pickle
+ml/*.pkl
+
+# ⚠️ Não ignorar os notebooks .ipynb importantes?
+
+# Se quiser ignorar notebooks, remova o comentário:
+# ml/*.ipynb
+
+# ============================
+# 🔥 ML-API (Flask)
+# ============================
+ml-api/__pycache__/
+ml-api/.venv/
+ml-api/*.pyc
+ml-api/*.pyo
+ml-api/*.pyd
+
+# Modelo exportado (pesado)
+ml-api/model_export/
+ml-api/model_export2/*.pkl
+ml-api/model_export2/*.json
+ml-api/model_export2/*.joblib
+
+# NÃO ignorar:
+# ml-api/predict_api.py
+# ml-api/Dockerfile
+# ml-api/requirements.txt
+
+# ============================
+# 🔥 DATA (para não subir dados sensíveis / grandes)
+# ============================
+backend/src/data/*.csv
+backend/src/data/*.xls
+backend/src/data/*.xlsx
+backend/src/data/*.json
+backend/src/data/*.txt
+
+# EXCEÇÕES — arquivos pequenos e necessários
+!backend/src/data/categorical_info.json
+!backend/src/data/historico_precos.json
+
+# ============================
+# 🔥 ROOT
+# ============================
+node_modules/
+package-lock.json
+.yarn/
+.pnp.*
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Scripts locais
+dev.sh
+docker-dev.sh
+
+# ============================
+# 🔥 GIT FOLDER ITSELF
+# ============================
+.gitignore

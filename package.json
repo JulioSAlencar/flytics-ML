@@ -1,0 +1,17 @@
+{
+  "name": "flytics-ml",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev", 
+    "dev:ml": "cd ml && source .venv/bin/activate && python3 predict_api.py",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "install:ml": "cd ml && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+    "build:all": "cd frontend && npm run build && cd ../backend && npm run build",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ml\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
